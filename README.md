@@ -1,6 +1,6 @@
-# Sentio — Real-Time Facial Emotion Detection
+# FaceSense — Real-Time Facial Emotion Detection
 
-**Sentio** is a modular, real-time facial emotion recognition utility. Built using **OpenCV** and the **DeepFace** library, it monitors input from your webcam, detects human faces, and overlays dominant emotions (e.g., Happy, Sad, Angry, Neutral) onto live video streams.
+**FaceSense** is a modular, real-time facial emotion recognition utility. Built using **OpenCV** and the **DeepFace** library, it monitors input from your webcam, detects human faces, and overlays dominant emotions (e.g., Happy, Sad, Angry, Neutral) onto live video streams.
 
 ---
 

@@ -1,5 +1,5 @@
 """
-Sentio - Real-Time Facial Emotion Detection
+FaceSense - Real-Time Facial Emotion Detection
 Built with OpenCV and DeepFace.
 """
 
@@ -13,13 +13,13 @@ from deepface import DeepFace
 
 # Set up logging configuration
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-logger = logging.getLogger("Sentio")
+logger = logging.getLogger("FaceSense")
 
 
-class SentioDetector:
+class FaceSenseDetector:
     def __init__(self, device_id=0, scale_factor=1.1, min_neighbors=5, min_size=(30, 30)):
         """
-        Initializes the Sentio Real-Time Emotion Detector.
+        Initializes the FaceSense Real-Time Emotion Detector.
         """
         self.device_id = device_id
         self.scale_factor = scale_factor
@@ -132,7 +132,7 @@ class SentioDetector:
                     )
                 
                 # Show GUI Window
-                cv2.imshow("Sentio - Real-Time Emotion Recognition", frame)
+                cv2.imshow("FaceSense - Real-Time Emotion Recognition", frame)
                 
                 # Press 'q' to break execution loop
                 if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -146,7 +146,7 @@ class SentioDetector:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Sentio - Real-Time Facial Emotion Detection")
+    parser = argparse.ArgumentParser(description="FaceSense - Real-Time Facial Emotion Detection")
     parser.add_argument("--device", type=int, default=0, help="Webcam device ID (default: 0)")
     parser.add_argument("--scale", type=float, default=1.1, help="Face detection scale factor (default: 1.1)")
     parser.add_argument("--neighbors", type=int, default=5, help="Face detection min neighbors (default: 5)")
@@ -154,7 +154,7 @@ def main():
     
     args = parser.parse_args()
     
-    detector = SentioDetector(
+    detector = FaceSenseDetector(
         device_id=args.device,
         scale_factor=args.scale,
         min_neighbors=args.neighbors
